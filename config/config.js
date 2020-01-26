@@ -36,10 +36,6 @@ const config = {
   basePath: envVars.BASE_PATH,
   mongooseDebug: envVars.MONGOOSE_DEBUG,
   jwtSecret: envVars.JWT_SECRET,
-  mongo: {
-    host: envVars.MONGO_HOST,
-    port: envVars.MONGO_PORT
-  }
 };
 
 module.exports = config;
