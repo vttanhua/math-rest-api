@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Math api test page</title>
+
+<script type="text/javascript" src="./js/mathClient.js"></script>
+</head>
+<body>
+
+	<form name="form_isPrime">
+    <p>Check if number is prime number:</p>
+		<input type="number" name="input_number" id="input_number"/>
+		<button id="button_isPrime" index="0" onclick="return isPrimeClick(this, document.getElementById('input_number').value);">Is prime?</button>
+	</form>
+  <br/><br/><br/><br/>
+	<form name="form_sumAndIsPrime">
+    <p>Provide list of numbers to calculate their sum and check if sum is prime number(each newline and , is a number separator decimal separator is .)</p>
+		<textarea type="textarea" rows="5" colss="20" name="input_numbers" id="input_numbers"></textarea>
+		<button id="button_sumAndPrime" index="0" onclick="return isPrimeAndSumClick(this, document.getElementById('input_numbers').value);">Calculate</button>
+	</form>		
+
+
+	<h3>Results:</h3>
+	<table id="resultsTable" border="1">
+		<tr>
+			<th>Value(s)</th>
+    		<th>Sum</th>
+    		<th>Is prime</th>
+    		<th>Error message</th>
+		</tr>
+	</table>	
+</body>
+<html>

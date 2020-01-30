@@ -7,10 +7,10 @@ const mathCtrl = require('./math.controller');
 
 
 
-router.route('/:value')
+router.route('/isPrime/:value')
   .get(validate(paramValidation.isPrime),mathCtrl.isPrime)
 
-router.route('/')
+router.route('/calculateSum')
 	.post(validate(paramValidation.calculateSum), mathCtrl.calculateSum)
 
 module.exports = router;

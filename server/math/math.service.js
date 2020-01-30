@@ -2,8 +2,7 @@ math = require('mathjs');
 
 
 function isPrime(value){
-	var isPrimeResult = !math.isNegative(value)&&math.isInteger(value)&&math.isPrime(value);
-	return isPrimeResult;
+	return isPrimeResult = !math.isNegative(value)&&math.isInteger(value)&&math.isPrime(value);
 }
 
 function calculateSum(valueArray){

@@ -5,10 +5,19 @@ const expect = chai.expect;
 
 chai.config.includeStack = true;
 
-const testNumber1=500;
-const testNumber2=6.6;
+const testNumber1 = 500;
+const testNumber2 = 6.6;
+
+//http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php 
+//should be prime
+const testNumber3 = 100010667737;
+const testNumber4 = 1;
+const testNumber5 = 0;
+const testNumber6 = -100010667737;
 const testNumberArray = [20,10,30];
 const testNumberArray2 = [20,10,30,-10.1,12.5];
+
+//TODO SOME ERROR CASES
 
   describe('# calculate sum of '+testNumberArray, () => {
     it('Should return 60', () => {
@@ -34,8 +43,27 @@ const testNumberArray2 = [20,10,30,-10.1,12.5];
   })
 });
 
-    describe("Start to test function A", function(){
-    it("should return 2 when we pass 1 and 1", function(){
-        expect(math.addTwo(1, 1)).to.be.equal(2)
-    });
+
+  describe('# is Prime '+testNumber3, () => {
+    it('Should return true', () => {
+      expect(math.isPrime(testNumber3)).to.be.equal(true);
+  })
+});
+
+describe('# is Prime '+testNumber4, () => {
+    it('Should return false', () => {
+      expect(math.isPrime(testNumber4)).to.be.equal(false);
+  })
+});
+
+describe('# is Prime '+testNumber5, () => {
+    it('Should return false', () => {
+      expect(math.isPrime(testNumber5)).to.be.equal(false);
+  })
+});
+
+describe('# is Prime '+testNumber6, () => {
+    it('Should return false', () => {
+      expect(math.isPrime(testNumber6)).to.be.equal(false);
+  })
 });
