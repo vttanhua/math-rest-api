@@ -1,4 +1,6 @@
-# API and simple html ui for testing if given number is prime and another endpoint for providing list of numbers and checking if the sum is prime.
+# Simple prime number api and user interface for it
+
+Project for calculating is number a prime number or is a sum of numbers a prime.
 
 Implementation based on this article http://kunalkapadia.github.io/express-mongoose-es6-rest-api/ and forked from corresponding git repo. All original readme is included at the end of this README (like original project setup steps used technologies etc)
 This project doesn't use Docker, Mongo or commit hooks. Those dependencies and code blocks are removed like some API endpoints like user and authentication.  
