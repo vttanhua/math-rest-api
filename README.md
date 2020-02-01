@@ -15,27 +15,43 @@ http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
 ###1)Is provided value a prime number:
 
 HTTP GET request:
+
 /api/v1/math/isPrime/{value}
+
 Response when input is valid
+
 {"isPrime":true} or {"isPrime":false}
 
 Otherwise http error with error message.
+
 Eg 
+
 /api/v1/math/isPrime/5x
+
 response is:
+
 HTTP/1.1 400 Bad Request
+
 With message body
+
 {"message":"\"value\" must be a number","stack":"APIError: \"value\" must be a number\n    at new ExtendableError ..."}
 
 ###2)Calculate sum of provided numbers and is sum prime number:
 
 HTTP POST request:
+
 /api/v1/math/calculateSum
+
 must have http header:
+
 Content-Type: application/json
+
 request body conten eg
+
 {"values":[2,2.2]}
+
 and response would be
+
 {"sum":4.2,"isPrime":false}
 
 error handling is similar to the first endpoint.
@@ -48,6 +64,7 @@ http://localhost:4040/mathAPItestPage.html
 ##Setup
 
 1)Clone or download project from url:
+
 https://github.com/vttanhua/math-rest-api
 
 In command line install yarn:
@@ -66,7 +83,9 @@ Start server:
 yarn start
 ```
 With the current environment settings project ui is served from url
+
 http://localhost:4040/mathAPItestPage.html
+
 and api will also run in the localhost port 4040.
 
 Below is the original README document:
