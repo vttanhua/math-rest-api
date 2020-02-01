@@ -11,6 +11,7 @@ http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
 ##Actual implemented API has 2 endpoints:
 
 ###1)Is provided value a prime number:
+
 HTTP GET request:
 /api/v1/math/isPrime/{value}
 Response when input is valid
@@ -25,6 +26,7 @@ With message body
 {"message":"\"value\" must be a number","stack":"APIError: \"value\" must be a number\n    at new ExtendableError ..."}
 
 ###2)Calculate sum of provided numbers and is sum prime number:
+
 HTTP POST request:
 /api/v1/math/calculateSum
 must have http header:
@@ -37,10 +39,12 @@ and response would be
 error handling is similar to the first endpoint.
 
 ##User interface:
+
 For testing purposes project has ui that is served from the url(in development mode):
 http://localhost:4040/mathAPItestPage.html
 
 ##Setup
+
 1)Clone or download project from url:
 https://github.com/vttanhua/math-rest-api
 
