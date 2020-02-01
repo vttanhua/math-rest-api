@@ -10,9 +10,9 @@ https://mathjs.org/
 Good source for prime numbers:
 http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
 
-##Actual implemented API has 2 endpoints:
+## Actual implemented API has 2 endpoints:
 
-###1)Is provided value a prime number:
+### 1)Is provided value a prime number:
 
 HTTP GET request:
 
@@ -36,7 +36,7 @@ With message body
 
 {"message":"\"value\" must be a number","stack":"APIError: \"value\" must be a number\n    at new ExtendableError ..."}
 
-###2)Calculate sum of provided numbers and is sum prime number:
+### 2)Calculate sum of provided numbers and is sum prime number:
 
 HTTP POST request:
 
@@ -56,12 +56,12 @@ and response would be
 
 error handling is similar to the first endpoint.
 
-##User interface:
+## User interface:
 
 For testing purposes project has ui that is served from the url(in development mode):
 http://localhost:4040/mathAPItestPage.html
 
-##Setup
+## Setup
 
 1)Clone or download project from url:
 
