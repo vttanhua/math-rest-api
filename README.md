@@ -1,3 +1,70 @@
+# API and simple html ui for testing if given number is prime and another endpoint for providing list of numbers and checking if the sum is prime.
+
+Implementation based on this article http://kunalkapadia.github.io/express-mongoose-es6-rest-api/ and forked from corresponding git repo. All original readme is included at the end of this README (like original project setup steps used technologies etc)
+This project doesn't use Docker, Mongo or commit hooks. Those dependencies and code blocks are removed like some API endpoints like user and authentication.  
+
+Math operations are implemented using mathjs library:
+https://mathjs.org/
+Good source for prime numbers:
+http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
+
+##Actual implemented API has 2 endpoints:
+
+###1)Is provided value a prime number:
+HTTP GET request:
+/api/v1/math/isPrime/{value}
+Response when input is valid
+{"isPrime":true} or {"isPrime":false}
+
+Otherwise http error with error message.
+Eg 
+/api/v1/math/isPrime/5x
+response is:
+HTTP/1.1 400 Bad Request
+With message body
+{"message":"\"value\" must be a number","stack":"APIError: \"value\" must be a number\n    at new ExtendableError ..."}
+
+###2)Calculate sum of provided numbers and is sum prime number:
+HTTP POST request:
+/api/v1/math/calculateSum
+must have http header:
+Content-Type: application/json
+request body conten eg
+{"values":[2,2.2]}
+and response would be
+{"sum":4.2,"isPrime":false}
+
+error handling is similar to the first endpoint.
+
+##User interface:
+For testing purposes project has ui that is served from the url(in development mode):
+http://localhost:4040/mathAPItestPage.html
+
+##Setup
+1)Clone or download project from url:
+https://github.com/vttanhua/math-rest-api
+
+In command line install yarn:
+```js
+npm install -g yarn
+```
+
+Install dependencies:
+```sh
+yarn
+```
+
+Start server:
+```sh
+# Start server
+yarn start
+```
+With the current environment settings project ui is served from url
+http://localhost:4040/mathAPItestPage.html
+and api will also run in the localhost port 4040.
+
+Below is the original README document:
+
 # Express & mongoose REST API Boilerplate in ES6 with Code Coverage [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 [![Build Status](https://img.shields.io/travis/kunalkapadia/express-mongoose-es6-rest-api/master.svg?style=flat-square)](https://travis-ci.org/kunalkapadia/express-mongoose-es6-rest-api)
